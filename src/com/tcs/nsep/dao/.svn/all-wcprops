@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ahd14j2ee/!svn/ver/8485/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao
+END
+DataBaseConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ahd14j2ee/!svn/ver/8631/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/DataBaseConnection.java
+END
+LoanRequestDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ahd14j2ee/!svn/ver/8452/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/LoanRequestDao.java
+END
+MemberRegistrationDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ahd14j2ee/!svn/ver/8452/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/MemberRegistrationDao.java
+END
+CollegeRegistrationDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ahd14j2ee/!svn/ver/8631/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/CollegeRegistrationDao.java
+END
+BankRegistrationDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ahd14j2ee/!svn/ver/8631/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/BankRegistrationDao.java
+END
+ChangeParameterDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ahd14j2ee/!svn/ver/8452/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/ChangeParameterDao.java
+END
+LoginDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ahd14j2ee/!svn/ver/8686/a61pd/p2/groupe/project/NSEP/src/com/tcs/nsep/dao/LoginDao.java
+END

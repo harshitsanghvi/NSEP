@@ -1,0 +1,8 @@
+<table width="1000px">
+	<tr align="center">
+		<td><a href="index.jsp">Home</a></td>
+		<td><a href="aboutus.jsp">About Us</a></td>
+		<td><a href="services.jsp">Services</a></td>
+		<td><a href="contactus.jsp">Contact Us</a></td>
+	</tr>
+</table>

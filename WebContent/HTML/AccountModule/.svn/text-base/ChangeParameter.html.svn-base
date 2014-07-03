@@ -1,0 +1,104 @@
+<script type="text/javascript"> 
+ 
+function validate_form ( )
+{
+	var s = document.reg_form2.InterestRate.value;
+	if (s==null || s=="")
+ 	{
+ 		alert("Field empty: Interest Rate");
+  		return false;
+ 	}       
+ 
+    	 else
+        	 {
+        	 if(isNaN(s)|| s.indexOf(" ")!=-1)
+    		{
+    	     	alert("Interest Rate should contain only numeric values");
+    			return false;
+    	    }
+    	    if (s.length <=2)
+    		{
+    	       			alert("Interest Rate should not more than 2 digits"); 
+    					return false;
+   			 }
+   			 }
+			 
+ 
+ 
+ 
+ 
+var x = document.reg_form2.AddPurpose.value;
+       
+        if (x==null || x=="")
+ 	 {
+ 		 alert("Field empty: Add Purpose");
+  		 return false;
+ 	 }       
+ 
+    	 else
+        	{
+    	    if (x.length>50)
+    		{
+    	       			alert("Add Purpose should be more than 50 characters "); 
+    					return false;
+   			 }
+   			 }
+ 
+var y = document.reg_form2.RemovePurpose.value;
+       
+        if (y==null || y=="")
+ 	 {
+ 		 alert("Field empty: Remove Purpose");
+  		 return false;
+ 	 }       
+ 
+    	 else
+        	{
+    	    if (y.length>50)
+    		{
+    	       			alert("Remove Purpose should be more than 50 characters "); 
+    					return false;
+   			 }
+   			 }
+ 
+ 
+ 
+ 
+ 
+			 
+}
+ 
+</script>
+
+<h2>ChangeParameter</h2>
+ 
+<form method="get" name="reg_form2" onSubmit="return validate_form()">
+<table>
+<tr>
+<td>Interest Rate: </td>
+<td><input type="text" name="InterestRate" title="Interest Rate"/></td>
+</tr>
+<tr>
+<td>Add Purpose:</td>
+<td> <input type="text" name="AddPurpose" title="Add Purpose"/></td>
+</tr>
+<tr>
+		<td>Remove Purpose:</td>
+		<td><select>
+			<option value="">-----select------</option>
+			<option value="College1">Exam fee of a competitive exam</option>
+			<option value="College2">Purchase of academic books</option>
+			<option value="College3">To enroll in any technical certification course</option>
+			
+		</select></td>
+
+<tr><td>
+<input type="submit" value="submit" title=" Click To Submit Details"/></td>
+
+<td><input type="reset" value="reset" title=" Click To Reset Details"/></td>
+</tr>
+ 
+ 
+ 
+</table>
+</form>

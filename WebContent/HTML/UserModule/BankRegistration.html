@@ -1,0 +1,112 @@
+
+<script type="text/javascript">
+function validate()
+{
+	var name=document.bankreg.BankName.value;
+	var loc=document.bankreg.branchLoc.value;
+	var spoc=document.bankreg.SPOCName.value;
+	var spocno=document.bankreg.SPOCContact.value;
+	var nat=document.bankreg.natbank.value;
+	
+
+	if(name==null || name=="")
+	{
+		alert("Field Empty: Bank Name");
+		return false;
+	}
+	if((name.length>20))
+	{
+		alert("Bank name should have maximum 20 characters.");
+		return false;
+	}
+
+
+	if(loc==null || loc=="")
+	{
+		alert("Field Empty: Branch Location");
+		return false;
+	}
+	if((loc.length>20))
+	{
+		alert("Branch Location should have maximum 20 characters.");
+		return false;
+	}
+
+	if(spoc==null || spoc=="")
+	{
+		alert("Field Empty: SPOC Name");
+		return false;
+	}
+	if((name.length>20))
+	{
+		alert("Bank name should have maximum 20 characters.");
+		return false;
+	}
+
+	if(spocno==null || spocno=="")
+	{
+		alert("Field Empty: SPOC Contact Number");
+		return false;
+	}
+	if((spocno.length!=10))
+	{
+		alert("SPOC Contact Number should have 10 digits.");
+		return false;
+	}
+	
+
+/*	if(nat==null || nat=="")
+	{
+		alert("Field Empty: Nationalized Bank?");
+		return false;
+	}
+*/	
+	return true;
+}
+</script>
+
+<h2>Bank Registration Form</h2>
+	<form method="get" name="bankreg" onSubmit="return validate()" action="/NSEP/BankRegistration" >
+		<table>
+			<tr>
+				<td>Bank Name: *</td>
+				<td><input type="text" name="BankName" style="width:200px"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Branch Location: *</td>
+				<td><input type="text" name="BranchLoc" style="width:200px"/></td>
+			</tr>
+			<tr>
+				<td>SPOC Name: *</td>
+				<td><input type="text" name="SPOCName" style="width:200px"/></td>
+			</tr>
+			<tr>
+				<td>SPOC Contact No.: *</td>
+				<td><input type="text" name="SPOCContact" style="width:200px"/></td>
+			</tr>
+			<tr>
+				<td>National Bank?: *</td>
+				<td><input type="radio" name="natbank" value="YES" /> YES
+				<input type="radio" name="natbank" value="NO" />
+				</td>
+			</tr>
+			<tr>
+				<td>Type Of Account: *</td>
+				<td><input type="checkbox" name="type_acc"/>Saving
+				<input type="checkbox" name="type_acc"/>Current
+				<input type="checkbox" name="type_acc"/>Recurring
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="checkbox" name="type_acc"/>Fixed
+				<input type="checkbox" name="type_acc"/>Salary
+				</td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" name="submit" value="Submit" style="align:center0"/></td>
+				<td align="center"><input type="reset" name="reset" value="Reset"/></td>
+			</tr>
+		</table>
+	</form>

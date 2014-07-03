@@ -1,0 +1,243 @@
+<script>
+	function check()
+	{
+		var a = /^[a-zA-Z ]+$/;
+		var b=/^[0-9]+$/;
+		if (!document.memberRegistration.studentName.value.match(a)) {
+			alert("Field should contain alphabets only.");
+			return false;
+		}
+		if (!document.memberRegistration.fatherName.value.match(a)) {
+			alert("Field should contain alphabets only.");
+			return false;
+		}
+		if (!document.memberRegistration.motherName.value.match(a)) {
+			alert("Field should contain alphabets only.");
+			return false;
+		}
+		if(!document.memberRegistration.enrollmentNumber.value.match(b))
+		{
+			alert("Field should contain numerics only.");
+			return false;
+			}
+		if(!document.memberRegistration.pincode.value.match(b))
+		{
+			 alert("Field should contain digits only");
+		return false;
+		}
+			if(document.memberRegistration.pincode.length>6)
+		{
+			alert("Field should contain 6  digits only.");
+			return false;
+		}
+		
+		if(!document.memberRegistration.contactNumber.value.match(b) && document.memberRegistration.contactNumber.length!=10)
+		{
+			alert("Field should contain 10 digits only.");
+			return false;
+			}
+		if(!document.memberRegistration.committedAmount.value.match(b))
+		{
+			alert("Field should contain digits only.");
+			return false;
+			}	
+	 return true;
+	}
+		
+	
+</script>
+<h2>Member Registration</h2>
+
+<form method="get" name="memberRegistration" onsubmit="check()" action="MemberUserModuleServlet">
+<table>
+	<tr>
+		<td>Student Name:</td>
+		<td><input type="text" name="studentName"></td>
+	</tr>
+	<tr></tr>
+	<tr>
+		<td>Father's Name:</td>
+		<td><input type="text" name="fatherName"></td>
+	</tr>
+	<tr>
+		<td>Mother's Name:</td>
+		<td><input type="text" name="motherName"></td>
+	</tr>
+	<tr>
+		<td>College Name:</td>
+		<td><select>
+			<option value="">-----select------</option>
+			<option value="College1">college1</option>
+			<option value="College2">college2</option>
+			<option value="College3">college3</option>
+			<option value="College4">college4</option>
+			<option value="College5">college5</option>
+		</select></td>
+	<tr>
+		<td>Enrollment Number:</td>
+		<td><input type="text" name="enrollmentNumber"></td>
+	</tr>
+	<tr>
+		<td>Current Year Of Graduation:</td>
+		<td><select>
+			<option value="">----select-----</option>
+			<option value="FirstYear">First Year</option>
+			<option value="SecondYear">Second Year</option>
+			<option value="ThirdYear">Third Year</option>
+		</select></td>
+	</tr>
+
+
+	<tr>
+		<td>Gender:</td>
+		<td><input type="radio" name="sex" value="Male">Male <input
+			type="radio" name="sex" value="Female">Female</td>
+	</tr>
+	<tr>
+		<td>Email id:</td>
+		<td><input type="text" name="emailId"></td>
+	</tr>
+	<tr>
+		<td>Permanent Address:</td>
+		<td><input type="text area" rows="3" cols="20" name="permanentAddress"></td>
+	</tr>
+	
+	<tr>
+		<td>City:</td>
+		<td><input type="text" name="city"></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td>Pincode:</td>
+		<td><input type="text" name="pincode"></td>
+	</tr>
+	<tr>
+		<td>Date Of Birth:</td>
+		<td><select>
+			<option value="Date">--date--</option>
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+			<option value="">4</option>
+			<option value="">5</option>
+			<option value="">6</option>
+			<option value="">7</option>
+			<option value="">8</option>
+			<option value="">9</option>
+			<option value="">10</option>
+			<option value="">11</option>
+			<option value="">12</option>
+			<option value="">13</option>
+			<option value="">14</option>
+			<option value="">15</option>
+			<option value="">16</option>
+			<option value="">17</option>
+			<option value="">18</option>
+			<option value="">19</option>
+			<option value="">20</option>
+			<option value="">21</option>
+			<option value="">22</option>
+			<option value="">23</option>
+			<option value="">24</option>
+			<option value="">25</option>
+			<option value="">27</option>
+			<option value="">28</option>
+			<option value="">29</option>
+			<option value="">30</option>
+			<option value="">31</option>
+		</select> <select>
+			<option value="">---month---</option>
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="March">March</option>
+			<option value="April">April</option>
+			<option value="May">May</option>
+			<option value="June">June</option>
+			<option value="July">July</option>
+			<option value="August">August</option>
+			<option value="September">September</option>
+			<option value="October">October</option>
+			<option value="November">November</option>
+			<option value="December">December</option>
+		</select></td>
+		<td><select name="year">
+			<option value="na">Year</option>
+			<option value="2000">2000</option>
+			<option value="1999">1999</option>
+			<option value="1998">1998</option>
+			<option value="1997">1997</option>
+			<option value="1996">1996</option>
+			<option value="1995">1995</option>
+			<option value="1994">1994</option>
+			<option value="1993">1993</option>
+			<option value="1992">1992</option>
+			<option value="1991">1991</option>
+			<option value="1990">1990</option>
+			<option value="1989">1989</option>
+			<option value="1988">1988</option>
+			<option value="1987">1987</option>
+			<option value="1986">1986</option>
+			<option value="1985">1985</option>
+			<option value="1984">1984</option>
+			<option value="1983">1983</option>
+			<option value="1982">1982</option>
+			<option value="1981">1981</option>
+			<option value="1980">1980</option>
+			<option value="1979">1979</option>
+			<option value="1978">1978</option>
+			<option value="1977">1977</option>
+			<option value="1976">1976</option>
+			<option value="1975">1975</option>
+			<option value="1974">1974</option>
+			<option value="1973">1973</option>
+			<option value="1972">1972</option>
+			<option value="1971">1971</option>
+			<option value="1970">1970</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Contact Number:</td>
+		<td><input type="text" name="contactNumber"></td>
+	</tr>
+	<tr></tr>
+	<tr></tr>
+	<tr>
+		<td>Security Qusetion:</td>
+		<td><select>
+			<option value="">-------select-------</option>
+			<option value="Question1">what is your mother's maiden name?</option>
+			<option value="Question2">what is your pet's name?</option>
+			<option value="Question3">what is your native place?</option>
+			<option value="Question4">what is your first school name?</option>
+			<option value="Question5">what is your place of birth?</option>
+			<option value="Question6">what is your sun-sign?</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Answer:</td>
+		<td><input type="text rows=" 1" cols="20" " name="Answer"></td>
+	</tr>
+	<tr>
+		<td>Bank Name:</td>
+		<td><select>
+			<option value="">-------select-------</option>
+			<option value="BankName1">1</option>
+			<option value="BankName2">2</option>
+			<option value="BankName3">3</option>
+			<option value="BankName4">4</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Committed Amount:</td>
+		<td><input type="text" name="committedAmount"></td>
+	</tr>
+
+	<tr>
+		<td><input type="submit" name="submit" value="Submit"></td>
+		<td><input type="reset" name="reset" value="Reset"></td>
+	</tr>
+</table>
+</form>

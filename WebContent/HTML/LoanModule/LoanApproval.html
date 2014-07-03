@@ -1,0 +1,35 @@
+<script>
+function validate()
+{
+var LoanId=document.getElementById("LoanId").value;
+if(LoanId.length>5)
+{
+	alert("Loan ID should have maximum 5 digits");
+	return false;
+}
+if(isNaN(LoanId))
+{
+	alert("Loan Id should be numeric");
+return false;
+}
+if (LoanId==null || LoanId=="")
+{
+	alert("Field Empty: Loan Id.");
+	return false;
+}
+var Status=document.getElementById("Status").value;
+if (Status==null || Status=="")
+{
+		alert("Field Empty: Status");
+		return false;
+}
+return true;
+}
+
+</script>
+<form>
+Loan Id : <input type="text" name="LoanId" id="LoanId"><br><br>
+Status : <input type="text" name="Status" id="Status"><br><br>
+<input type="submit" name="submit" value="Submit" onClick="return validate()"/>
+<input type="reset" name="reset" value="Reset">
+</form>

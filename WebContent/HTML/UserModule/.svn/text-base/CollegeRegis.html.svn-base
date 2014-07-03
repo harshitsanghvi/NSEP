@@ -1,0 +1,253 @@
+<script language="javascript" type="text/javascript">
+function validate()
+{
+	var CollegeName=document.form.CollegeName.value;
+	var Other=document.form.Other.value;
+	var UniversityName=document.form.UniversityName.value;
+	var CollegeAddress=document.form.CollegeAddress.value;
+	var SpocName=document.form.SpocName.value;
+	var SpocContactNumber=document.form.SpocContactNumber.value;
+	var SpocEmailId=document.form.SpocEmailId.value;
+	var City=document.form.City.value;
+	var State=document.form.State.value;
+
+
+	if (CollegeName==null || CollegeName=="")
+	{
+		alert("Field Empty: College Name");
+		return false;
+	}
+	var alpha=/^[a-zA-Z]+$/;
+	if(CollegeName.match(alpha))
+	{}
+	else
+	{
+		alert("Enter valid College Name.");
+		return false;
+	}
+	if((CollegeName.length>50))
+	{
+		alert("First name should have maximum 50 characters.");
+		return false;
+	}
+
+	/*if(Other==null || Other=="")
+	{
+		alert("Field Empty: College Name");
+		return false;
+	}
+	var alpha=/^[a-zA-Z]+$/;
+	if(Other.match(alpha))
+	{}
+	else
+	{
+		alert("Enter valid College Name.");
+		return false;
+	}
+	if((Other.length>50))
+	{
+		alert("First name should have maximum 50 characters.");
+		return false;
+	}*/
+	
+
+	if(UniversityName==null || UniversityName=="")
+	{
+		alert("Field Empty: University Name");
+		return false;
+	}
+
+	if(UniversityName.match(alpha)){}
+	else
+	{
+		alert("Enter valid University Name.");
+		return false;
+	}	
+	if((UniversityName.length>40))
+	{
+		alert("University name should have maximum 40 characters.");
+		return false;
+	}
+
+
+	if (CollegeAddress==null || CollegeAddress=="")
+	{
+		alert("Field Empty: College Address");
+		return false;
+	}
+
+
+	if(SpocName==null || SpocName=="")
+	{
+		alert("Field Empty: SPOC Name");
+		return false;
+	}
+	if(SpocName.match(alpha)){}
+	else
+	{
+		alert("Enter valid SPOC Name.");
+		return false;
+	}	
+	if(SpocName.length>20)
+	{
+		alert("SPOC name should have maximum 20 characters.");
+		return false;
+	}
+	if(SpocContactNumber==null || SpocContactNumber=="")
+	{
+		alert("Field Empty: SPOC Contact number.");
+		return false;
+	}
+	if(isNaN(SpocContactNumber))
+	{
+		alert("SPOC Contact number should be numeric.");
+		return false;
+	}
+	if(SpocContactNumber.length!=10)
+	{
+		alert("SPOC Contact Number should be of  10 digits.");
+		return false;
+	}
+	
+	if(SpocEmailId==null || SpocEmailId=="")
+	{
+		alert("Field Empty:SPOC Email ID");
+		return false;
+	}
+	if(City==-1 || City=="Select City")
+	{
+		alert("Field Empty: City");
+		return false;
+	}
+	if(City.match(alpha)){}
+	else
+	{
+		alert("Enter valid City Name.");
+		return false;
+	}	
+	if (State==-1 || State=="Select State")
+	{
+		alert("Field Empty: State");
+		return false;
+	}
+	if(State.match(alpha)){}
+	else
+	{
+		alert("Enter valid State Name.");
+		return false;
+	}	
+	return true;
+}
+
+function getid()
+{
+	var x=document.getElementById('select');
+	var strUser = x.options[x.selectedIndex].value;
+	if(strUser=="Other")
+	{
+		document.getElementById('other').disabled=false;
+	}
+}
+</script>
+
+<h2>College Registration</h2>
+<form method="get" name="form" onSubmit="return validate()" action="/NSEP/CollegeRegistration" >
+<table>
+	<tr>
+		<td>College name*:</td>
+		<td>
+			<select name="CollegeName" id="select" onChange="getid()">
+			<option value="-1">--Select--</option>
+			<option value="MotilalalNehruNationalInstitueofTechnology">Motilalal
+			Nehru National Institue of Technology</option>
+			<option value="DelhiCollegeofEngineering">Delhi College of
+			Engineering</option>
+			<option value="MANIT">MANIT</option>
+			<option value="SGSInstituteofTechnologyandScience">SGS Institute of Technology and Science</option>
+			<option value="JabalpurEngineeringCollege">Jabalpur
+			Engineering College</option>
+			<option value="Other">Other</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Other:</td>
+		<td><input id="other" name="Other" value="" disabled="true"></td>
+	</tr>
+	<tr>
+		<td>University name*:</td>
+		<td><select name="UniversityName">
+			<option value="-1">--Select--</option>
+			<option value="RajivGandhiTechnicalUniversity">Rajiv Gandhi Technical University</option>
+			<option value="DelhiTechnologicalUniversity">Delhi
+			Technological University</option>
+			<option value="UttarPradeshTechnicalUniversity">Uttar
+			Pradesh Technical University</option>
+			<option value="RajasthanTechnicalUniversity">Rajasthan
+			Technical University</option>
+			<option value="Other">Other</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>College Address* :</td>
+		<td><textarea name="CollegeAddress" rows="4" cols="35"></textarea></td>
+	</tr>
+	<tr>
+		<td>SPOC Name* :</td>
+		<td><input type="text" name="SpocName" value=""></input></td>
+	</tr>
+	<tr>
+
+		<td>SPOC Contact No* :</td>
+		<td><input type="text" name="SpocContactNumber" value=""></input></td>
+	</tr>
+	<tr>
+		<td>SPOC Email Id* :</td>
+		<td><input type="text" name="SpocEmailId" value=""></input></td>
+	</tr>
+	<tr>
+		<td>City*:</td>
+		<td>
+			<select name="City">
+			<option value="-1">--Select City--</option>
+			<option value="Allahabad">Allahabad</option>
+			<option value="Bangalore">Bangalore</option>
+			<option value="Chennai">Chennai</option>
+			<option value="Delhi">Delhi</option>
+			<option value="Gurgaon">Gurgaon</option>
+			<option value="Hyderabad">Hyderabad</option>
+			<option value="Indore">Indore</option>
+			<option value="Kolkata">Kolkata</option>
+			<option value="Mumbai">Mumbai</option>
+			<option value="Pune">Pune</option>
+			<option value="Other">Other</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>State*</td>
+		<td>
+			<select name="State">
+			<option value="-1">--Select State--</option>
+			<option value="AndhraPradesh">Andhra Pradesh</option>
+			<option value="Bihar">Bihar</option>
+			<option value="Goa">Goa</option>
+			<option value="Gujrat">Gujrat</option>
+			<option value="Kerala">Kerala</option>
+			<option value="Maharastra">Maharastra</option>
+			<option value="M.P">Madhya Pradesh</option>
+			<option value="Orissa">Orissa</option>
+			<option value="Karnataka">Karanataka</option>
+			<option value="Punjab">Punjab</option>
+			<option value="Rajasthan">Rajasthan</option>
+			<option value="TN">Tamil Nadu</option>
+			<option value="Other">Other</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="Submit" value="Submit"/></td>
+		<td><input type="Reset" value="Reset" /></td>
+	</tr>
+</table>
+</form>

@@ -1,0 +1,69 @@
+<script type="text/javascript">
+
+function validate() 
+{
+ 
+        if (document.getElementById("StudentId").value == null || document.getElementById("StudentId").value == "") 
+		{
+            alert("Field Empty : Student Id");
+            return false;
+        }
+        if (document.getElementById("StudentId").value.length != 5) 
+		{
+            alert("Student Id should be of 5 digits");
+            return false;
+        }
+        
+        if (isNaN(document.getElementById("StudentId").value)) 
+		{
+            alert("Student Id should be numeric");
+            return false;
+        }
+                    
+        if (document.getElementById("Purpose").value == null || document.getElementById("Purpose").value == "") 
+		{
+            alert("Field Empty : Purpose");
+            return false;
+        }
+        if (document.getElementById("LoanAmount").value == null || document.getElementById("LoanAmount").value == "") 
+		{
+            alert("Field Empty : Loan Amount");
+            return false;
+        }
+         
+        if (isNaN(document.getElementById("LoanAmount").value)) 
+   		{
+               alert("Loan Amount should be numeric");
+               return false;
+        }
+        if ((document.getElementById("LoanAmount").value).length>5) 
+        {
+			alert("Loan Amount should be of maximun 5 digits")
+         }
+               
+return true;
+}
+
+</script>
+
+<form name="form1" action="Form3.html" onSubmit="return validate();">
+
+<table>
+	<tr>
+		<td>Student Id:*</td>
+		<td><input type="text" name="StudentId" id="StudentId"></td>
+	</tr>
+	<tr>
+		<td>Purpose:*</td>
+		<td><textarea name="Purpose" id="Purpose" title="enter textarea"></textarea></td>
+	</tr>
+	<tr>
+		<td>Loan Amount:*</td>
+		<td><input type="text" name="LoanAmount" id="LoanAmount"></td>
+	</tr>
+	<tr>
+	<td><input type="submit" value="submit" /></td>
+	<td><input type="reset" value="reset" /></td>
+	</tr>
+</table>
+</form>
